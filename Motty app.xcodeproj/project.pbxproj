@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB425AFD1BB4C8C2005FB2FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */; };
+		EB425AFF1BB4C8C2005FB2FA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425AFE1BB4C8C2005FB2FA /* FirstViewController.swift */; };
+		EB425B011BB4C8C2005FB2FA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B001BB4C8C2005FB2FA /* SecondViewController.swift */; };
+		EB425B041BB4C8C2005FB2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B021BB4C8C2005FB2FA /* Main.storyboard */; };
+		EB425B061BB4C8C2005FB2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB425B051BB4C8C2005FB2FA /* Assets.xcassets */; };
+		EB425B091BB4C8C2005FB2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */; };
+		EB425B141BB4C8C3005FB2FA /* Motty_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B131BB4C8C3005FB2FA /* Motty_appTests.swift */; };
+		EB425B1F1BB4C8C3005FB2FA /* Motty_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB425B101BB4C8C3005FB2FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB425AF11BB4C8C2005FB2FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB425AF81BB4C8C2005FB2FA;
+			remoteInfo = "Motty app";
+		};
+		EB425B1B1BB4C8C3005FB2FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB425AF11BB4C8C2005FB2FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB425AF81BB4C8C2005FB2FA;
+			remoteInfo = "Motty app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB425AF91BB4C8C2005FB2FA /* Motty app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motty app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB425AFE1BB4C8C2005FB2FA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		EB425B001BB4C8C2005FB2FA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EB425B031BB4C8C2005FB2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB425B051BB4C8C2005FB2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB425B081BB4C8C2005FB2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB425B0A1BB4C8C2005FB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB425B0F1BB4C8C3005FB2FA /* Motty appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motty appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB425B131BB4C8C3005FB2FA /* Motty_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motty_appTests.swift; sourceTree = "<group>"; };
+		EB425B151BB4C8C3005FB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB425B1A1BB4C8C3005FB2FA /* Motty appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motty appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motty_appUITests.swift; sourceTree = "<group>"; };
+		EB425B201BB4C8C3005FB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB425AF61BB4C8C2005FB2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB425B0C1BB4C8C3005FB2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB425B171BB4C8C3005FB2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB425AF01BB4C8C2005FB2FA = {
+			isa = PBXGroup;
+			children = (
+				EB425AFB1BB4C8C2005FB2FA /* Motty app */,
+				EB425B121BB4C8C3005FB2FA /* Motty appTests */,
+				EB425B1D1BB4C8C3005FB2FA /* Motty appUITests */,
+				EB425AFA1BB4C8C2005FB2FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB425AFA1BB4C8C2005FB2FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB425AF91BB4C8C2005FB2FA /* Motty app.app */,
+				EB425B0F1BB4C8C3005FB2FA /* Motty appTests.xctest */,
+				EB425B1A1BB4C8C3005FB2FA /* Motty appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB425AFB1BB4C8C2005FB2FA /* Motty app */ = {
+			isa = PBXGroup;
+			children = (
+				EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */,
+				EB425AFE1BB4C8C2005FB2FA /* FirstViewController.swift */,
+				EB425B001BB4C8C2005FB2FA /* SecondViewController.swift */,
+				EB425B021BB4C8C2005FB2FA /* Main.storyboard */,
+				EB425B051BB4C8C2005FB2FA /* Assets.xcassets */,
+				EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */,
+				EB425B0A1BB4C8C2005FB2FA /* Info.plist */,
+			);
+			path = "Motty app";
+			sourceTree = "<group>";
+		};
+		EB425B121BB4C8C3005FB2FA /* Motty appTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB425B131BB4C8C3005FB2FA /* Motty_appTests.swift */,
+				EB425B151BB4C8C3005FB2FA /* Info.plist */,
+			);
+			path = "Motty appTests";
+			sourceTree = "<group>";
+		};
+		EB425B1D1BB4C8C3005FB2FA /* Motty appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */,
+				EB425B201BB4C8C3005FB2FA /* Info.plist */,
+			);
+			path = "Motty appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB425AF81BB4C8C2005FB2FA /* Motty app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB425B231BB4C8C3005FB2FA /* Build configuration list for PBXNativeTarget "Motty app" */;
+			buildPhases = (
+				EB425AF51BB4C8C2005FB2FA /* Sources */,
+				EB425AF61BB4C8C2005FB2FA /* Frameworks */,
+				EB425AF71BB4C8C2005FB2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Motty app";
+			productName = "Motty app";
+			productReference = EB425AF91BB4C8C2005FB2FA /* Motty app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB425B0E1BB4C8C3005FB2FA /* Motty appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB425B261BB4C8C3005FB2FA /* Build configuration list for PBXNativeTarget "Motty appTests" */;
+			buildPhases = (
+				EB425B0B1BB4C8C3005FB2FA /* Sources */,
+				EB425B0C1BB4C8C3005FB2FA /* Frameworks */,
+				EB425B0D1BB4C8C3005FB2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB425B111BB4C8C3005FB2FA /* PBXTargetDependency */,
+			);
+			name = "Motty appTests";
+			productName = "Motty appTests";
+			productReference = EB425B0F1BB4C8C3005FB2FA /* Motty appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EB425B191BB4C8C3005FB2FA /* Motty appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB425B291BB4C8C3005FB2FA /* Build configuration list for PBXNativeTarget "Motty appUITests" */;
+			buildPhases = (
+				EB425B161BB4C8C3005FB2FA /* Sources */,
+				EB425B171BB4C8C3005FB2FA /* Frameworks */,
+				EB425B181BB4C8C3005FB2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB425B1C1BB4C8C3005FB2FA /* PBXTargetDependency */,
+			);
+			name = "Motty appUITests";
+			productName = "Motty appUITests";
+			productReference = EB425B1A1BB4C8C3005FB2FA /* Motty appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB425AF11BB4C8C2005FB2FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Alexander Padin";
+				TargetAttributes = {
+					EB425AF81BB4C8C2005FB2FA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 695Y6QZA3C;
+					};
+					EB425B0E1BB4C8C3005FB2FA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 695Y6QZA3C;
+						TestTargetID = EB425AF81BB4C8C2005FB2FA;
+					};
+					EB425B191BB4C8C3005FB2FA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 695Y6QZA3C;
+						TestTargetID = EB425AF81BB4C8C2005FB2FA;
+					};
+				};
+			};
+			buildConfigurationList = EB425AF41BB4C8C2005FB2FA /* Build configuration list for PBXProject "Motty app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB425AF01BB4C8C2005FB2FA;
+			productRefGroup = EB425AFA1BB4C8C2005FB2FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB425AF81BB4C8C2005FB2FA /* Motty app */,
+				EB425B0E1BB4C8C3005FB2FA /* Motty appTests */,
+				EB425B191BB4C8C3005FB2FA /* Motty appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB425AF71BB4C8C2005FB2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB425B091BB4C8C2005FB2FA /* LaunchScreen.storyboard in Resources */,
+				EB425B061BB4C8C2005FB2FA /* Assets.xcassets in Resources */,
+				EB425B041BB4C8C2005FB2FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB425B0D1BB4C8C3005FB2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB425B181BB4C8C3005FB2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB425AF51BB4C8C2005FB2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB425B011BB4C8C2005FB2FA /* SecondViewController.swift in Sources */,
+				EB425AFD1BB4C8C2005FB2FA /* AppDelegate.swift in Sources */,
+				EB425AFF1BB4C8C2005FB2FA /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB425B0B1BB4C8C3005FB2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB425B141BB4C8C3005FB2FA /* Motty_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB425B161BB4C8C3005FB2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB425B1F1BB4C8C3005FB2FA /* Motty_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB425B111BB4C8C3005FB2FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB425AF81BB4C8C2005FB2FA /* Motty app */;
+			targetProxy = EB425B101BB4C8C3005FB2FA /* PBXContainerItemProxy */;
+		};
+		EB425B1C1BB4C8C3005FB2FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB425AF81BB4C8C2005FB2FA /* Motty app */;
+			targetProxy = EB425B1B1BB4C8C3005FB2FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB425B021BB4C8C2005FB2FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB425B031BB4C8C2005FB2FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB425B081BB4C8C2005FB2FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB425B211BB4C8C3005FB2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB425B221BB4C8C3005FB2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB425B241BB4C8C3005FB2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Motty app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EB425B251BB4C8C3005FB2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Motty app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EB425B271BB4C8C3005FB2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Motty appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Motty app.app/Motty app";
+			};
+			name = Debug;
+		};
+		EB425B281BB4C8C3005FB2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Motty appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Motty app.app/Motty app";
+			};
+			name = Release;
+		};
+		EB425B2A1BB4C8C3005FB2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Motty appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Motty app";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EB425B2B1BB4C8C3005FB2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Motty appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Motty app";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB425AF41BB4C8C2005FB2FA /* Build configuration list for PBXProject "Motty app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB425B211BB4C8C3005FB2FA /* Debug */,
+				EB425B221BB4C8C3005FB2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB425B231BB4C8C3005FB2FA /* Build configuration list for PBXNativeTarget "Motty app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB425B241BB4C8C3005FB2FA /* Debug */,
+				EB425B251BB4C8C3005FB2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EB425B261BB4C8C3005FB2FA /* Build configuration list for PBXNativeTarget "Motty appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB425B271BB4C8C3005FB2FA /* Debug */,
+				EB425B281BB4C8C3005FB2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EB425B291BB4C8C3005FB2FA /* Build configuration list for PBXNativeTarget "Motty appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB425B2A1BB4C8C3005FB2FA /* Debug */,
+				EB425B2B1BB4C8C3005FB2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB425AF11BB4C8C2005FB2FA /* Project object */;
+}
