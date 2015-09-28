@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +16,59 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_background" translatesAutoresizingMaskIntoConstraints="NO" id="LCD-Tk-Vmc">
+                                <rect key="frame" x="0.0" y="0.0" width="399" height="567"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="399" id="1cB-49-VM2"/>
+                                    <constraint firstAttribute="height" constant="567" id="6BO-tk-dAM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_word" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-87-MC3">
+                                <rect key="frame" x="225" y="378" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ro9-vo-3aR"/>
+                                    <constraint firstAttribute="height" constant="40" id="xQn-dc-mGG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-T2-BVw">
+                                <rect key="frame" x="195" y="132" width="210" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="4jT-hI-Na6"/>
+                                    <constraint firstAttribute="height" constant="215" id="J2f-u2-lxx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2015. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4P-qz-peN">
+                                <rect key="frame" x="153" y="571" width="294" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.0" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="M4P-qz-peN" firstAttribute="centerX" secondItem="2dh-87-MC3" secondAttribute="centerX" id="9OG-Qx-yVd"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="M4P-qz-peN" secondAttribute="bottom" constant="8" symbolic="YES" id="CXY-nb-lXG"/>
+                            <constraint firstItem="HpK-T2-BVw" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="112" id="KY7-h7-dif"/>
+                            <constraint firstItem="LCD-Tk-Vmc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LSu-nX-ATo"/>
+                            <constraint firstItem="HpK-T2-BVw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Lc4-74-A8H"/>
+                            <constraint firstItem="LCD-Tk-Vmc" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="SiT-Zi-Klb"/>
+                            <constraint firstItem="2dh-87-MC3" firstAttribute="top" secondItem="HpK-T2-BVw" secondAttribute="bottom" constant="31" id="fWc-Oz-bKc"/>
+                            <constraint firstItem="2dh-87-MC3" firstAttribute="centerX" secondItem="HpK-T2-BVw" secondAttribute="centerX" id="n8r-LI-ZyP"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="motty_background" width="797" height="1131"/>
+        <image name="motty_splash_logo" width="512" height="507"/>
+        <image name="motty_word" width="300" height="89"/>
+    </resources>
 </document>
