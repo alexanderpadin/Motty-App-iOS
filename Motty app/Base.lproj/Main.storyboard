@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -51,7 +52,7 @@
                                     <constraint firstItem="vDG-mI-FUA" firstAttribute="centerY" secondItem="quo-Un-xzN" secondAttribute="centerY" constant="1.5" id="u6C-yi-osk"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zgw-3D-DNY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin_placed" translatesAutoresizingMaskIntoConstraints="NO" id="zgw-3D-DNY">
                                 <rect key="frame" x="220" y="206" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="2e7-WM-WwR"/>
@@ -59,10 +60,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQK-cS-7fa">
-                                <rect key="frame" x="545" y="494" width="49" height="49"/>
+                                <rect key="frame" x="538" y="493" width="50" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O6-G7-GM0">
-                                        <rect key="frame" x="9" y="10" width="30" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="30" height="30"/>
                                         <state key="normal" image="target_pin"/>
                                         <connections>
                                             <action selector="locationButtonOnClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="R8a-XS-4uS"/>
@@ -72,9 +73,9 @@
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.0" blue="0.090196078431372548" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="1O6-G7-GM0" firstAttribute="centerY" secondItem="pQK-cS-7fa" secondAttribute="centerY" id="D7Y-lm-5nu"/>
-                                    <constraint firstAttribute="width" constant="49" id="XxT-z9-J05"/>
-                                    <constraint firstAttribute="height" constant="49" id="gY5-T9-hMU"/>
-                                    <constraint firstItem="1O6-G7-GM0" firstAttribute="leading" secondItem="pQK-cS-7fa" secondAttribute="leading" constant="9" id="hV5-RW-Yz0"/>
+                                    <constraint firstAttribute="width" constant="50" id="XxT-z9-J05"/>
+                                    <constraint firstAttribute="height" constant="50" id="gY5-T9-hMU"/>
+                                    <constraint firstItem="1O6-G7-GM0" firstAttribute="leading" secondItem="pQK-cS-7fa" secondAttribute="leading" constant="10" id="hV5-RW-Yz0"/>
                                     <constraint firstItem="1O6-G7-GM0" firstAttribute="centerX" secondItem="pQK-cS-7fa" secondAttribute="centerX" id="mss-Dp-HYC"/>
                                     <constraint firstItem="1O6-G7-GM0" firstAttribute="top" secondItem="pQK-cS-7fa" secondAttribute="top" constant="10" id="nrC-RR-yEJ"/>
                                 </constraints>
@@ -84,29 +85,38 @@
                         <constraints>
                             <constraint firstItem="zgw-3D-DNY" firstAttribute="centerY" secondItem="kaS-N9-rmh" secondAttribute="centerY" id="0B2-rS-l4a"/>
                             <constraint firstItem="quo-Un-xzN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-7" id="3FH-FU-fkF"/>
-                            <constraint firstItem="pQK-cS-7fa" firstAttribute="top" secondItem="kaS-N9-rmh" secondAttribute="bottom" constant="-57" id="M6S-hk-Am1"/>
+                            <constraint firstItem="pQK-cS-7fa" firstAttribute="top" secondItem="kaS-N9-rmh" secondAttribute="bottom" constant="-58" id="M6S-hk-Am1"/>
                             <constraint firstItem="quo-Un-xzN" firstAttribute="top" secondItem="eyn-UR-Kh2" secondAttribute="bottom" constant="8" id="QOl-po-TI6"/>
                             <constraint firstItem="kaS-N9-rmh" firstAttribute="top" secondItem="eyn-UR-Kh2" secondAttribute="bottom" constant="-44" id="a5L-cn-1xe"/>
                             <constraint firstItem="kaS-N9-rmh" firstAttribute="centerX" secondItem="quo-Un-xzN" secondAttribute="centerX" constant="-0.5" id="gsc-T0-Xkr"/>
                             <constraint firstItem="kaS-N9-rmh" firstAttribute="bottom" secondItem="ubd-12-tgW" secondAttribute="top" id="kYt-8X-CKU"/>
                             <constraint firstItem="zgw-3D-DNY" firstAttribute="centerX" secondItem="kaS-N9-rmh" secondAttribute="centerX" id="odd-pm-gS0"/>
                             <constraint firstAttribute="trailing" secondItem="kaS-N9-rmh" secondAttribute="trailing" id="syz-YU-JeK"/>
-                            <constraint firstItem="pQK-cS-7fa" firstAttribute="leading" secondItem="kaS-N9-rmh" secondAttribute="trailing" constant="-55" id="ydB-0c-PE1"/>
+                            <constraint firstItem="pQK-cS-7fa" firstAttribute="leading" secondItem="kaS-N9-rmh" secondAttribute="trailing" constant="-62" id="ydB-0c-PE1"/>
                             <constraint firstItem="kaS-N9-rmh" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ysz-4E-WAl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="pJl-Ia-t8M">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="oIH-Hc-Smk">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="toggleSearchBar:" destination="9pv-A4-QxB" id="BVL-4l-BbJ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="4Cy-jv-Hbj">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="addNewPlace:" destination="9pv-A4-QxB" id="all-oT-FLN"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="oIH-Hc-Smk">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="toggleSearchBar:" destination="9pv-A4-QxB" id="BVL-4l-BbJ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="locationView" destination="pQK-cS-7fa" id="swC-hA-Cfi"/>
                         <outlet property="mapView" destination="kaS-N9-rmh" id="j6S-Qs-H1L"/>
+                        <outlet property="pinView" destination="zgw-3D-DNY" id="ak3-kE-yRe"/>
                         <outlet property="searchButton" destination="oIH-Hc-Smk" id="JvU-XM-Uwj"/>
                         <outlet property="searchView" destination="quo-Un-xzN" id="SBE-MU-ggq"/>
                     </connections>
@@ -212,7 +222,7 @@
     </scenes>
     <resources>
         <image name="motty_tab" width="25" height="25"/>
-        <image name="pin_icon" width="170" height="170"/>
+        <image name="pin_placed" width="170" height="170"/>
         <image name="places_tab" width="25" height="25"/>
         <image name="search_icon" width="512" height="512"/>
         <image name="target_pin" width="512" height="512"/>

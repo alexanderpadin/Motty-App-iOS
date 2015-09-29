@@ -15,6 +15,8 @@
 		EB425B091BB4C8C2005FB2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */; };
 		EB425B141BB4C8C3005FB2FA /* Motty_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B131BB4C8C3005FB2FA /* Motty_appTests.swift */; };
 		EB425B1F1BB4C8C3005FB2FA /* Motty_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */; };
+		EB9F97C81BBA32E300371A31 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9F97C71BBA32E300371A31 /* MapKit.framework */; };
+		EB9F97CA1BBA32EB00371A31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		EB425B1A1BB4C8C3005FB2FA /* Motty appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motty appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motty_appUITests.swift; sourceTree = "<group>"; };
 		EB425B201BB4C8C3005FB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB9F97C71BBA32E300371A31 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9F97CA1BBA32EB00371A31 /* CoreLocation.framework in Frameworks */,
+				EB9F97C81BBA32E300371A31 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,8 @@
 		EB425AF01BB4C8C2005FB2FA = {
 			isa = PBXGroup;
 			children = (
+				EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */,
+				EB9F97C71BBA32E300371A31 /* MapKit.framework */,
 				EB425AFB1BB4C8C2005FB2FA /* Motty app */,
 				EB425B121BB4C8C3005FB2FA /* Motty appTests */,
 				EB425B1D1BB4C8C3005FB2FA /* Motty appUITests */,
