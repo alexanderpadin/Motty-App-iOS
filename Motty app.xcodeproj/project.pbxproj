@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB369F881BCB010400B9E786 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB369F861BCB010400B9E786 /* DataModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		EB369F8A1BCB3C2400B9E786 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB369F891BCB3C2400B9E786 /* AddPlaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EB425AFD1BB4C8C2005FB2FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */; };
-		EB425AFF1BB4C8C2005FB2FA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425AFE1BB4C8C2005FB2FA /* FirstViewController.swift */; };
-		EB425B011BB4C8C2005FB2FA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B001BB4C8C2005FB2FA /* SecondViewController.swift */; };
+		EB425AFF1BB4C8C2005FB2FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425AFE1BB4C8C2005FB2FA /* HomeViewController.swift */; };
+		EB425B011BB4C8C2005FB2FA /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B001BB4C8C2005FB2FA /* PlacesViewController.swift */; };
 		EB425B041BB4C8C2005FB2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B021BB4C8C2005FB2FA /* Main.storyboard */; };
 		EB425B061BB4C8C2005FB2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB425B051BB4C8C2005FB2FA /* Assets.xcassets */; };
 		EB425B091BB4C8C2005FB2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */; };
 		EB425B141BB4C8C3005FB2FA /* Motty_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B131BB4C8C3005FB2FA /* Motty_appTests.swift */; };
 		EB425B1F1BB4C8C3005FB2FA /* Motty_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */; };
-		EB9F97C81BBA32E300371A31 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9F97C71BBA32E300371A31 /* MapKit.framework */; };
 		EB9F97CA1BBA32EB00371A31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB369F871BCB010400B9E786 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EB369F891BCB3C2400B9E786 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
 		EB425AF91BB4C8C2005FB2FA /* Motty app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motty app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB425AFE1BB4C8C2005FB2FA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		EB425B001BB4C8C2005FB2FA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EB425AFE1BB4C8C2005FB2FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EB425B001BB4C8C2005FB2FA /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		EB425B031BB4C8C2005FB2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB425B051BB4C8C2005FB2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB425B081BB4C8C2005FB2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		EB425B1A1BB4C8C3005FB2FA /* Motty appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motty appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motty_appUITests.swift; sourceTree = "<group>"; };
 		EB425B201BB4C8C3005FB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB9F97C71BBA32E300371A31 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -61,7 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9F97CA1BBA32EB00371A31 /* CoreLocation.framework in Frameworks */,
-				EB9F97C81BBA32E300371A31 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */,
-				EB9F97C71BBA32E300371A31 /* MapKit.framework */,
 				EB425AFB1BB4C8C2005FB2FA /* Motty app */,
 				EB425B121BB4C8C3005FB2FA /* Motty appTests */,
 				EB425B1D1BB4C8C3005FB2FA /* Motty appUITests */,
@@ -108,12 +108,14 @@
 			isa = PBXGroup;
 			children = (
 				EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */,
-				EB425AFE1BB4C8C2005FB2FA /* FirstViewController.swift */,
-				EB425B001BB4C8C2005FB2FA /* SecondViewController.swift */,
+				EB425AFE1BB4C8C2005FB2FA /* HomeViewController.swift */,
+				EB425B001BB4C8C2005FB2FA /* PlacesViewController.swift */,
+				EB369F891BCB3C2400B9E786 /* AddPlaceViewController.swift */,
 				EB425B021BB4C8C2005FB2FA /* Main.storyboard */,
 				EB425B051BB4C8C2005FB2FA /* Assets.xcassets */,
 				EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */,
 				EB425B0A1BB4C8C2005FB2FA /* Info.plist */,
+				EB369F861BCB010400B9E786 /* DataModel.xcdatamodeld */,
 			);
 			path = "Motty app";
 			sourceTree = "<group>";
@@ -277,9 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB425B011BB4C8C2005FB2FA /* SecondViewController.swift in Sources */,
+				EB425B011BB4C8C2005FB2FA /* PlacesViewController.swift in Sources */,
+				EB369F881BCB010400B9E786 /* DataModel.xcdatamodeld in Sources */,
 				EB425AFD1BB4C8C2005FB2FA /* AppDelegate.swift in Sources */,
-				EB425AFF1BB4C8C2005FB2FA /* FirstViewController.swift in Sources */,
+				EB369F8A1BCB3C2400B9E786 /* AddPlaceViewController.swift in Sources */,
+				EB425AFF1BB4C8C2005FB2FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +531,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB369F861BCB010400B9E786 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB369F871BCB010400B9E786 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EB369F871BCB010400B9E786 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EB425AF11BB4C8C2005FB2FA /* Project object */;
 }

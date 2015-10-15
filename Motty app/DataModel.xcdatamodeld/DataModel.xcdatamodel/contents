@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="Folders" syncable="YES">
+        <attribute name="folderBackground" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="folderIcon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="folderId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="folderName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="folderNumOfItems" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Places" syncable="YES">
+        <attribute name="folderId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeCoord" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeNote" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Folders" positionX="-261" positionY="-9" width="128" height="120"/>
+        <element name="Places" positionX="-54" positionY="-9" width="128" height="135"/>
+    </elements>
+</model>
