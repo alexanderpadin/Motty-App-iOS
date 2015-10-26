@@ -7,17 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB10058B1BD18E6D00393B13 /* location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB10058A1BD18E6D00393B13 /* location_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EB10058F1BD18EE000393B13 /* add_folder.png in Resources */ = {isa = PBXBuildFile; fileRef = EB10058E1BD18EE000393B13 /* add_folder.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005931BD18FAD00393B13 /* address_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005921BD18FAD00393B13 /* address_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005951BD1901C00393B13 /* folder_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005941BD1901C00393B13 /* folder_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005971BD190B000393B13 /* n_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005961BD190B000393B13 /* n_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005991BD190B700393B13 /* motty_splash_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005981BD190B700393B13 /* motty_splash_logo.png */; settings = {ASSET_TAGS = (); }; };
+		EB10059B1BD190BF00393B13 /* motty_word.png in Resources */ = {isa = PBXBuildFile; fileRef = EB10059A1BD190BF00393B13 /* motty_word.png */; settings = {ASSET_TAGS = (); }; };
+		EB10059D1BD190C900393B13 /* notes_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB10059C1BD190C900393B13 /* notes_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EB10059F1BD190E500393B13 /* search_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB10059E1BD190E500393B13 /* search_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005A11BD190ED00393B13 /* pin_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005A01BD190ED00393B13 /* pin_hover.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005A31BD1914A00393B13 /* pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005A21BD1914A00393B13 /* pin_small.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005A51BD1926200393B13 /* pin_placed.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005A41BD1926200393B13 /* pin_placed.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005A71BD192C500393B13 /* dismiss_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005A61BD192C500393B13 /* dismiss_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005A91BD1933F00393B13 /* motty_background.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005A81BD1933F00393B13 /* motty_background.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005AB1BD2C8A100393B13 /* FoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1005AA1BD2C8A100393B13 /* FoldersViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EB1005AD1BD2FA8400393B13 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1005AC1BD2FA8400393B13 /* PlacesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EB1005B91BD43A6B00393B13 /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1005B81BD43A6B00393B13 /* FolderTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		EB1005BC1BD43E8A00393B13 /* home_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005BA1BD43E8A00393B13 /* home_bg.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005BD1BD43E8A00393B13 /* restaurants_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005BB1BD43E8A00393B13 /* restaurants_bg.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005C01BD43EF300393B13 /* restaurants_i.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005BE1BD43EF300393B13 /* restaurants_i.png */; settings = {ASSET_TAGS = (); }; };
+		EB1005C11BD43EF300393B13 /* home_i.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1005BF1BD43EF300393B13 /* home_i.png */; settings = {ASSET_TAGS = (); }; };
 		EB369F881BCB010400B9E786 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB369F861BCB010400B9E786 /* DataModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		EB369F8A1BCB3C2400B9E786 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB369F891BCB3C2400B9E786 /* AddPlaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EB425AFD1BB4C8C2005FB2FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */; };
 		EB425AFF1BB4C8C2005FB2FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425AFE1BB4C8C2005FB2FA /* HomeViewController.swift */; };
-		EB425B011BB4C8C2005FB2FA /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B001BB4C8C2005FB2FA /* PlacesViewController.swift */; };
-		EB425B041BB4C8C2005FB2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B021BB4C8C2005FB2FA /* Main.storyboard */; };
+		EB425B041BB4C8C2005FB2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B021BB4C8C2005FB2FA /* Main.storyboard */; settings = {ASSET_TAGS = (folder, ); }; };
 		EB425B061BB4C8C2005FB2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB425B051BB4C8C2005FB2FA /* Assets.xcassets */; };
 		EB425B091BB4C8C2005FB2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */; };
 		EB425B141BB4C8C3005FB2FA /* Motty_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B131BB4C8C3005FB2FA /* Motty_appTests.swift */; };
 		EB425B1F1BB4C8C3005FB2FA /* Motty_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */; };
 		EB9F97CA1BBA32EB00371A31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */; };
+		EBB3A2741BD9C37B00AE4D76 /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A2731BD9C37B00AE4D76 /* PlaceCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2841BDDAD0D00AE4D76 /* map_bg6.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A27B1BDDAD0D00AE4D76 /* map_bg6.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2851BDDAD0D00AE4D76 /* map_bg7.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A27C1BDDAD0D00AE4D76 /* map_bg7.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2861BDDAD0D00AE4D76 /* map_bg8.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A27D1BDDAD0D00AE4D76 /* map_bg8.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2871BDDAD0D00AE4D76 /* map_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A27E1BDDAD0D00AE4D76 /* map_bg1.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2881BDDAD0D00AE4D76 /* map_bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A27F1BDDAD0D00AE4D76 /* map_bg2.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2891BDDAD0D00AE4D76 /* map_bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A2801BDDAD0D00AE4D76 /* map_bg3.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A28A1BDDAD0D00AE4D76 /* map_bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A2811BDDAD0D00AE4D76 /* map_bg4.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A28B1BDDAD0D00AE4D76 /* map_bg5.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A2821BDDAD0D00AE4D76 /* map_bg5.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A28C1BDDAD0D00AE4D76 /* map_bg0.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A2831BDDAD0D00AE4D76 /* map_bg0.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A28E1BDDB14400AE4D76 /* map_bg9.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A28D1BDDB14400AE4D76 /* map_bg9.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2941BDDB78A00AE4D76 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A2931BDDB78A00AE4D76 /* edit.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2961BDDBE8A00AE4D76 /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB3A2951BDDBE8A00AE4D76 /* go.png */; settings = {ASSET_TAGS = (); }; };
+		EBB3A2981BDDCB0600AE4D76 /* EditPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A2971BDDCB0600AE4D76 /* EditPlaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +72,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB10058A1BD18E6D00393B13 /* location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon.png; sourceTree = "<group>"; };
+		EB10058E1BD18EE000393B13 /* add_folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_folder.png; sourceTree = "<group>"; };
+		EB1005921BD18FAD00393B13 /* address_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_icon.png; sourceTree = "<group>"; };
+		EB1005941BD1901C00393B13 /* folder_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder_icon.png; sourceTree = "<group>"; };
+		EB1005961BD190B000393B13 /* n_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = n_icon.png; sourceTree = "<group>"; };
+		EB1005981BD190B700393B13 /* motty_splash_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motty_splash_logo.png; sourceTree = "<group>"; };
+		EB10059A1BD190BF00393B13 /* motty_word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motty_word.png; sourceTree = "<group>"; };
+		EB10059C1BD190C900393B13 /* notes_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notes_icon.png; sourceTree = "<group>"; };
+		EB10059E1BD190E500393B13 /* search_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_icon.png; sourceTree = "<group>"; };
+		EB1005A01BD190ED00393B13 /* pin_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_hover.png; sourceTree = "<group>"; };
+		EB1005A21BD1914A00393B13 /* pin_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_small.png; sourceTree = "<group>"; };
+		EB1005A41BD1926200393B13 /* pin_placed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_placed.png; sourceTree = "<group>"; };
+		EB1005A61BD192C500393B13 /* dismiss_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dismiss_icon.png; sourceTree = "<group>"; };
+		EB1005A81BD1933F00393B13 /* motty_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motty_background.png; sourceTree = "<group>"; };
+		EB1005AA1BD2C8A100393B13 /* FoldersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldersViewController.swift; sourceTree = "<group>"; };
+		EB1005AC1BD2FA8400393B13 /* PlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		EB1005B81BD43A6B00393B13 /* FolderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
+		EB1005BA1BD43E8A00393B13 /* home_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_bg.png; sourceTree = "<group>"; };
+		EB1005BB1BD43E8A00393B13 /* restaurants_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurants_bg.png; sourceTree = "<group>"; };
+		EB1005BE1BD43EF300393B13 /* restaurants_i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurants_i.png; sourceTree = "<group>"; };
+		EB1005BF1BD43EF300393B13 /* home_i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_i.png; sourceTree = "<group>"; };
 		EB369F871BCB010400B9E786 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EB369F891BCB3C2400B9E786 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
 		EB425AF91BB4C8C2005FB2FA /* Motty app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motty app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB425AFE1BB4C8C2005FB2FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EB425B001BB4C8C2005FB2FA /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		EB425B031BB4C8C2005FB2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB425B051BB4C8C2005FB2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB425B081BB4C8C2005FB2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +109,20 @@
 		EB425B1E1BB4C8C3005FB2FA /* Motty_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motty_appUITests.swift; sourceTree = "<group>"; };
 		EB425B201BB4C8C3005FB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9F97C91BBA32EB00371A31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EBB3A2731BD9C37B00AE4D76 /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		EBB3A27B1BDDAD0D00AE4D76 /* map_bg6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg6.png; sourceTree = "<group>"; };
+		EBB3A27C1BDDAD0D00AE4D76 /* map_bg7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg7.png; sourceTree = "<group>"; };
+		EBB3A27D1BDDAD0D00AE4D76 /* map_bg8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg8.png; sourceTree = "<group>"; };
+		EBB3A27E1BDDAD0D00AE4D76 /* map_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg1.png; sourceTree = "<group>"; };
+		EBB3A27F1BDDAD0D00AE4D76 /* map_bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg2.png; sourceTree = "<group>"; };
+		EBB3A2801BDDAD0D00AE4D76 /* map_bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg3.png; sourceTree = "<group>"; };
+		EBB3A2811BDDAD0D00AE4D76 /* map_bg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg4.png; sourceTree = "<group>"; };
+		EBB3A2821BDDAD0D00AE4D76 /* map_bg5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg5.png; sourceTree = "<group>"; };
+		EBB3A2831BDDAD0D00AE4D76 /* map_bg0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg0.png; sourceTree = "<group>"; };
+		EBB3A28D1BDDB14400AE4D76 /* map_bg9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_bg9.png; sourceTree = "<group>"; };
+		EBB3A2931BDDB78A00AE4D76 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		EBB3A2951BDDBE8A00AE4D76 /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go.png; sourceTree = "<group>"; };
+		EBB3A2971BDDCB0600AE4D76 /* EditPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPlaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +151,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB1005891BD18D5C00393B13 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3A2931BDDB78A00AE4D76 /* edit.png */,
+				EBB3A2951BDDBE8A00AE4D76 /* go.png */,
+				EBB3A2831BDDAD0D00AE4D76 /* map_bg0.png */,
+				EBB3A27E1BDDAD0D00AE4D76 /* map_bg1.png */,
+				EBB3A27F1BDDAD0D00AE4D76 /* map_bg2.png */,
+				EBB3A2801BDDAD0D00AE4D76 /* map_bg3.png */,
+				EBB3A2811BDDAD0D00AE4D76 /* map_bg4.png */,
+				EBB3A2821BDDAD0D00AE4D76 /* map_bg5.png */,
+				EBB3A27B1BDDAD0D00AE4D76 /* map_bg6.png */,
+				EBB3A27C1BDDAD0D00AE4D76 /* map_bg7.png */,
+				EBB3A27D1BDDAD0D00AE4D76 /* map_bg8.png */,
+				EBB3A28D1BDDB14400AE4D76 /* map_bg9.png */,
+				EB10059C1BD190C900393B13 /* notes_icon.png */,
+				EB1005A21BD1914A00393B13 /* pin_small.png */,
+				EB1005A41BD1926200393B13 /* pin_placed.png */,
+				EB1005A01BD190ED00393B13 /* pin_hover.png */,
+				EB10059E1BD190E500393B13 /* search_icon.png */,
+				EB1005A61BD192C500393B13 /* dismiss_icon.png */,
+				EB1005A81BD1933F00393B13 /* motty_background.png */,
+				EB10059A1BD190BF00393B13 /* motty_word.png */,
+				EB1005981BD190B700393B13 /* motty_splash_logo.png */,
+				EB1005961BD190B000393B13 /* n_icon.png */,
+				EB1005921BD18FAD00393B13 /* address_icon.png */,
+				EB1005941BD1901C00393B13 /* folder_icon.png */,
+				EB10058E1BD18EE000393B13 /* add_folder.png */,
+				EB10058A1BD18E6D00393B13 /* location_icon.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		EB1005AE1BD41C5900393B13 /* folder_bg */ = {
+			isa = PBXGroup;
+			children = (
+				EB1005BA1BD43E8A00393B13 /* home_bg.png */,
+				EB1005BB1BD43E8A00393B13 /* restaurants_bg.png */,
+			);
+			name = folder_bg;
+			sourceTree = "<group>";
+		};
+		EB1005AF1BD41C8600393B13 /* folder_icon */ = {
+			isa = PBXGroup;
+			children = (
+				EB1005BE1BD43EF300393B13 /* restaurants_i.png */,
+				EB1005BF1BD43EF300393B13 /* home_i.png */,
+			);
+			name = folder_icon;
+			sourceTree = "<group>";
+		};
 		EB425AF01BB4C8C2005FB2FA = {
 			isa = PBXGroup;
 			children = (
@@ -107,15 +226,22 @@
 		EB425AFB1BB4C8C2005FB2FA /* Motty app */ = {
 			isa = PBXGroup;
 			children = (
+				EB1005891BD18D5C00393B13 /* assets */,
+				EB1005AE1BD41C5900393B13 /* folder_bg */,
+				EB1005AF1BD41C8600393B13 /* folder_icon */,
 				EB425AFC1BB4C8C2005FB2FA /* AppDelegate.swift */,
 				EB425AFE1BB4C8C2005FB2FA /* HomeViewController.swift */,
-				EB425B001BB4C8C2005FB2FA /* PlacesViewController.swift */,
 				EB369F891BCB3C2400B9E786 /* AddPlaceViewController.swift */,
+				EB1005AA1BD2C8A100393B13 /* FoldersViewController.swift */,
+				EB1005B81BD43A6B00393B13 /* FolderTableViewCell.swift */,
+				EB1005AC1BD2FA8400393B13 /* PlacesViewController.swift */,
+				EBB3A2731BD9C37B00AE4D76 /* PlaceCollectionViewCell.swift */,
+				EBB3A2971BDDCB0600AE4D76 /* EditPlaceViewController.swift */,
 				EB425B021BB4C8C2005FB2FA /* Main.storyboard */,
-				EB425B051BB4C8C2005FB2FA /* Assets.xcassets */,
 				EB425B071BB4C8C2005FB2FA /* LaunchScreen.storyboard */,
-				EB425B0A1BB4C8C2005FB2FA /* Info.plist */,
 				EB369F861BCB010400B9E786 /* DataModel.xcdatamodeld */,
+				EB425B051BB4C8C2005FB2FA /* Assets.xcassets */,
+				EB425B0A1BB4C8C2005FB2FA /* Info.plist */,
 			);
 			path = "Motty app";
 			sourceTree = "<group>";
@@ -200,6 +326,9 @@
 		EB425AF11BB4C8C2005FB2FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					folder,
+				);
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Alexander Padin";
 				TargetAttributes = {
@@ -252,9 +381,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB10059F1BD190E500393B13 /* search_icon.png in Resources */,
+				EB1005931BD18FAD00393B13 /* address_icon.png in Resources */,
+				EBB3A2861BDDAD0D00AE4D76 /* map_bg8.png in Resources */,
+				EBB3A2841BDDAD0D00AE4D76 /* map_bg6.png in Resources */,
+				EB1005BC1BD43E8A00393B13 /* home_bg.png in Resources */,
+				EB1005991BD190B700393B13 /* motty_splash_logo.png in Resources */,
+				EB1005C01BD43EF300393B13 /* restaurants_i.png in Resources */,
+				EBB3A2961BDDBE8A00AE4D76 /* go.png in Resources */,
+				EBB3A2891BDDAD0D00AE4D76 /* map_bg3.png in Resources */,
 				EB425B091BB4C8C2005FB2FA /* LaunchScreen.storyboard in Resources */,
+				EBB3A28B1BDDAD0D00AE4D76 /* map_bg5.png in Resources */,
+				EBB3A2851BDDAD0D00AE4D76 /* map_bg7.png in Resources */,
+				EB1005A91BD1933F00393B13 /* motty_background.png in Resources */,
+				EB10058F1BD18EE000393B13 /* add_folder.png in Resources */,
+				EB1005971BD190B000393B13 /* n_icon.png in Resources */,
+				EB10059D1BD190C900393B13 /* notes_icon.png in Resources */,
+				EB1005A71BD192C500393B13 /* dismiss_icon.png in Resources */,
+				EBB3A2871BDDAD0D00AE4D76 /* map_bg1.png in Resources */,
+				EB10059B1BD190BF00393B13 /* motty_word.png in Resources */,
+				EB1005951BD1901C00393B13 /* folder_icon.png in Resources */,
+				EB10058B1BD18E6D00393B13 /* location_icon.png in Resources */,
+				EBB3A28C1BDDAD0D00AE4D76 /* map_bg0.png in Resources */,
+				EBB3A28A1BDDAD0D00AE4D76 /* map_bg4.png in Resources */,
+				EB1005BD1BD43E8A00393B13 /* restaurants_bg.png in Resources */,
 				EB425B061BB4C8C2005FB2FA /* Assets.xcassets in Resources */,
+				EB1005A31BD1914A00393B13 /* pin_small.png in Resources */,
+				EBB3A2881BDDAD0D00AE4D76 /* map_bg2.png in Resources */,
 				EB425B041BB4C8C2005FB2FA /* Main.storyboard in Resources */,
+				EBB3A2941BDDB78A00AE4D76 /* edit.png in Resources */,
+				EB1005C11BD43EF300393B13 /* home_i.png in Resources */,
+				EB1005A51BD1926200393B13 /* pin_placed.png in Resources */,
+				EB1005A11BD190ED00393B13 /* pin_hover.png in Resources */,
+				EBB3A28E1BDDB14400AE4D76 /* map_bg9.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +438,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB425B011BB4C8C2005FB2FA /* PlacesViewController.swift in Sources */,
+				EB1005AD1BD2FA8400393B13 /* PlacesViewController.swift in Sources */,
 				EB369F881BCB010400B9E786 /* DataModel.xcdatamodeld in Sources */,
+				EB1005AB1BD2C8A100393B13 /* FoldersViewController.swift in Sources */,
 				EB425AFD1BB4C8C2005FB2FA /* AppDelegate.swift in Sources */,
+				EBB3A2741BD9C37B00AE4D76 /* PlaceCollectionViewCell.swift in Sources */,
 				EB369F8A1BCB3C2400B9E786 /* AddPlaceViewController.swift in Sources */,
+				EBB3A2981BDDCB0600AE4D76 /* EditPlaceViewController.swift in Sources */,
+				EB1005B91BD43A6B00393B13 /* FolderTableViewCell.swift in Sources */,
 				EB425AFF1BB4C8C2005FB2FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Motty app/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,7 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Motty app/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.motty.app.Motty-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";

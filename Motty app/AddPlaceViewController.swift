@@ -8,10 +8,11 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class addPlaceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
-    private let _REGION_RADIUS: CLLocationDistance = 1000
+    private let _REGION_RADIUS: CLLocationDistance = 500
     
     @IBOutlet weak var segueMapView: MKMapView!
     
@@ -19,82 +20,64 @@ class addPlaceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var noteTextView: UITextField!
     @IBOutlet weak var addresTextView: UITextField!
     @IBOutlet weak var folderPicker: UIPickerView!
+    @IBOutlet weak var folderTextView: UITextField!
     
     @IBOutlet weak var nameParentView: UIView!
     @IBOutlet weak var addressParentView: UIView!
     @IBOutlet weak var noteParentView: UIView!
     @IBOutlet weak var folderParentView: UIView!
-   
-    @IBOutlet weak var mapUpperShadow: UIView!
-    @IBOutlet weak var mapLowerShadow: UIView!
     
+    @IBOutlet weak var saveButton: UIButton!
     var placeLat : CLLocationDegrees = 0.0
     var placeLon : CLLocationDegrees = 0.0
     var pickerData: [String] = [String]()
+    var folderArray:[(name: String, ID: String)] = []
+    
+    private var appDelagate: AppDelegate = AppDelegate()
+    private var context: NSManagedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
+    private var result : [AnyObject]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Set View Delegate
         self.nameTextView.delegate = self
         self.noteTextView.delegate = self
         self.addresTextView.delegate = self
-        
-        //Hide keyboard onTap
+        self.folderTextView.delegate = self
+        self.folderPicker.delegate = self
+        self.folderPicker.dataSource = self
+    
+        //Set keyboard onTap
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
-        //pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
-        self.folderPicker.delegate = self
-        self.folderPicker.dataSource = self
+        //Get AppDelegate Context
+        appDelagate = UIApplication.sharedApplication().delegate as! AppDelegate
+        context = appDelagate.managedObjectContext
         
-        mapUpperShadow.layer.shadowOffset = CGSize(width: 3, height: 3)
-        mapUpperShadow.layer.shadowOpacity = 0.3
-        mapUpperShadow.layer.shadowRadius = 2
+        //Center Map in location selected
+        centerMapOnLocation(CLLocation(latitude: placeLat as Double, longitude: placeLon as Double))
         
-        mapLowerShadow.layer.shadowOffset = CGSize(width: 3, height: -3)
-        mapLowerShadow.layer.shadowOpacity = 0.3
-        mapLowerShadow.layer.shadowRadius = 2
+        //Set AddressTextView content
+        getAddress(placeLat, lon: placeLon)
         
-        let initialLocation = CLLocation(latitude: placeLat as Double, longitude: placeLon as Double)
-        centerMapOnLocation(initialLocation)
-    
-        let geocoder = CLGeocoder()
-        let location = CLLocation(latitude: placeLat, longitude: placeLon)
-        var newAddress = ""
-        geocoder.reverseGeocodeLocation(location) {
-            (placemarks, error) -> Void in
-            if let placemarks = placemarks as [CLPlacemark]!
-                where placemarks.count > 0 {
-                    for item in placemarks[0].addressDictionary?["FormattedAddressLines"] as! NSArray {
-                        newAddress += (newAddress == "") ? "\(item)" : ", \(item)"
-                    }
-                    self.addresTextView.text = newAddress
-            } else {
-                //Do nothing
-            }
-        }
-
     }
     
     override func viewDidLayoutSubviews() {
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: false)
+        //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: false)
         prepareView()
     }
     
-    @IBAction func cancelPressed(sender: AnyObject) {
-        //UIApplication.sharedApplication().setStatusBarStyle(statusBarStyle: UIStatusBarStyle, animated: <#T##Bool#>)
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    @IBAction func savePlacePressed(sender: AnyObject) {
-        //UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
     
+    /*  Hide keyboard  */
     func DismissKeyboard(){
         //Hide keyboard
         view.endEditing(true)
     }
     
+    /*  Prepare view style  */
     func prepareView() -> Void {
         let width = CGFloat(1.0)
     
@@ -116,27 +99,83 @@ class addPlaceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         noteBorder.frame = CGRect(x: 0, y: self.noteParentView.frame.size.height, width: self.noteParentView.frame.size.width, height: width)
         self.noteParentView.layer.addSublayer(noteBorder)
         
-//        let folderBorder = CALayer()
-//        folderBorder.backgroundColor = UIColor(red: 223.0/255, green: 223.0/255, blue: 223.0/255, alpha: 2.0).CGColor
-//        folderBorder.frame = CGRect(x: 0, y: self.folderParentView.frame.size.height, width: self.folderParentView.frame.size.width, height: width)
-//        self.folderParentView.layer.addSublayer(folderBorder)
-
+        
+        //Save button
+        self.saveButton.layer.cornerRadius = 3.0
+        self.saveButton.layer.shadowOffset = CGSize(width: 2, height: 2)
+        self.saveButton.layer.shadowOpacity = 0.3
+        self.saveButton.layer.shadowRadius = 3.0
+        
+        //Picker View
+        self.folderPicker.layer.cornerRadius = 3.0
+        //Map View
+        self.segueMapView.layer.cornerRadius = 3.0
     }
     
+    /*  Get Addres from coordenates and set textview  */
+    func getAddress(lat: Double, lon: Double) {
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: lat as Double, longitude: lon as Double)
+        var newAddress = ""
+        
+        geocoder.reverseGeocodeLocation(location) {
+            (placemarks, error) -> Void in
+            if let placemarks = placemarks as [CLPlacemark]!
+                where placemarks.count > 0 {
+                    for item in placemarks[0].addressDictionary?["FormattedAddressLines"] as! NSArray {
+                        newAddress += (newAddress == "") ? "\(item)" : ", \(item)"
+                    }
+                    self.addresTextView.text = newAddress
+            } else {
+                self.addresTextView.text = ""
+            }
+        }
+    }
+
+    /*  Center Map to location selected  */
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(
-            location.coordinate, _REGION_RADIUS * 2.0, _REGION_RADIUS * 2.0)
+            location.coordinate, _REGION_RADIUS * 0.5, _REGION_RADIUS * 0.5)
         segueMapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+
+    /*  Insert new data to the db  */
+    func insertData(placeName: String, placeX: Double, placeY: Double, placeAddress: String, folderIndex: Int, placeNote: String) {
+        
+        //Cannot send dta with actual address, usally is ready when segue is up, in case isnt the function is no executed.
+        if(placeAddress == "") {
+            return
+        }
+    
+        let nameOfPlace = (placeName == "") ? "Unamed" : placeName
+        let IdOfPlace = nameOfPlace + "_\(Int(arc4random_uniform(99999999)))"
+        let folderId = folderArray[folderIndex].1
+        let newPlace = NSEntityDescription.insertNewObjectForEntityForName("Places",
+                inManagedObjectContext: context) as NSManagedObject
+    
+        newPlace.setValue(IdOfPlace, forKey: "placeId")
+        newPlace.setValue(nameOfPlace, forKey: "placeName")
+        newPlace.setValue(placeAddress, forKey: "placeAddress")
+        newPlace.setValue(folderId, forKey: "folderId")
+        newPlace.setValue(placeNote, forKey: "placeNote")
+        newPlace.setValue(placeX, forKey: "placeX")
+        newPlace.setValue(placeY, forKey: "placeY")
+        
+        do {
+            try context.save()
+            print("Success")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        } catch _ {
+            print("Error")
+        }
+        
     }
     
-    // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
+    
+    /*********************************************************************
+        Picker functions
+    **********************************************************************/
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -153,8 +192,90 @@ class addPlaceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return myTitle
     }
     
+    // When picker view is changed
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.folderTextView.text = self.pickerData[ self.folderPicker.selectedRowInComponent(0)]
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    /*********************************************************************
+        ./Picker functions
+    **********************************************************************/
+    
+    
+    /*********************************************************************
+        Keyboard functions
+    **********************************************************************/
+    
+    /*  Handle when textviews are pressed  */
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        //If folder view is presses avoid keyboard prompt
+        if(textField.tag == 1) {
+            //Hide keyboard
+            view.endEditing(true)
+            
+            if(self.folderPicker.alpha != 1.0) {
+                self.folderPicker.transform = CGAffineTransformMakeScale(1.0, 0.0)
+                self.folderPicker.alpha = 1.0
+                UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseInOut, animations: {
+                    self.folderPicker.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                    }, completion: { finished in
+                        self.folderTextView.text = self.pickerData[ self.folderPicker.selectedRowInComponent(0)]
+                })
+            } else {
+                UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseInOut, animations: {
+                   
+                    self.folderPicker.alpha = 0.0
+            
+                    }, completion: { finished in
+                        
+                        self.folderTextView.text = self.pickerData[ self.folderPicker.selectedRowInComponent(0)]
+                })
+            }
+            
+            return false
+        } else {
+            UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseInOut, animations: {
+                self.folderPicker.alpha = 0.0
+                }, completion: { finished in
+                    //Do Nothing.
+            })
+            return true
+        }
+    }
+    
+    /*  Close keyboard when return is pressed  */
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         view.endEditing(true)
         return false
     }
+    /*********************************************************************
+        ./Keyboard functions
+    **********************************************************************/
+    
+    
+    /*********************************************************************
+        Action Outlets
+    **********************************************************************/
+    
+    /*  Triggered when cancel button is pressed  */
+    @IBAction func cancelPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    /*  Triggered when save button is pressed  */
+    @IBAction func savePlacePressed(sender: AnyObject) {
+        insertData(nameTextView.text!, placeX: placeLat, placeY: placeLon,
+            placeAddress: addresTextView.text!, folderIndex: self.folderPicker.selectedRowInComponent(0), placeNote: noteTextView.text!)
+    }
+    /*********************************************************************
+        ./Action Outlets
+    **********************************************************************/
 }

@@ -14,15 +14,15 @@ import CoreData
 class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var locationView: UIView!
-    @IBOutlet weak var searchView: UIView!
-    @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet weak var searchView: UIView!                                            
     @IBOutlet weak var pinView: UIImageView!
+    @IBOutlet weak var locationButton: UIButton!
     
     private let _REGION_RADIUS: CLLocationDistance = 1000
     private var _SEARCH_HIDDEN = true
     private var _ACTUAL_POS: CGFloat = 0
     private let _LOCATION_MANAGER = CLLocationManager()
+    
     private var appDelagate: AppDelegate = AppDelegate()
     private var context: NSManagedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
     private var result : [AnyObject]?
@@ -30,9 +30,12 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Set view rounded corners
-        locationView.layer.cornerRadius = 25.0
-        searchView.layer.cornerRadius = 8.0
+        //Set preconf file if needed.
+        if(ifFirstTimeRunning()) {
+            insertDefaultCategory()
+            NSUserDefaults.standardUserDefaults().setValue("NO", forKey: "FirstTime")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
         
         //Hide keyboard onTap
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
@@ -49,73 +52,64 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
         _LOCATION_MANAGER.requestWhenInUseAuthorization()
         _LOCATION_MANAGER.distanceFilter = _REGION_RADIUS
         
-   //     Get AppDelegate Context
+        //Get AppDelegate Context
         appDelagate = UIApplication.sharedApplication().delegate as! AppDelegate
         context = appDelagate.managedObjectContext
-        
-//        
-//        let newFolder = NSEntityDescription.insertNewObjectForEntityForName("Folders",
-//            inManagedObjectContext: context) as NSManagedObject
-//        
-//        newFolder.setValue("Restaurants", forKey: "folderName")
-//        newFolder.setValue("restaurants", forKey: "folderId")
-//        newFolder.setValue(0, forKey: "folderNumOfItems")
-//        newFolder.setValue("icon", forKey: "folderIcon")
-//        newFolder.setValue("background", forKey: "folderBackground")
-//        
-//        do {
-//            try context.save()
-//            let AlertController = UIAlertController(
-//                title: "Success",
-//                message: "New Folder Saved Successfully.",
-//                preferredStyle: .Alert)
-//            
-//            AlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-//            self.presentViewController(AlertController, animated: true, completion: nil)
-//            
-//        } catch _ {
-//            let AlertController = UIAlertController(
-//                title: "Error",
-//                message: "Something when wrong saving the new Folder.",
-//                preferredStyle: .Alert)
-//            
-//            AlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-//        }
-//
-        
-        
     }
-   
+    
     /*  Called after view appear  */
     override func viewDidAppear(animated: Bool) {
-         /*  Hide search bar */
-        _ACTUAL_POS = (self.searchView.center.y !=  0) ? self.searchView.center.y : _ACTUAL_POS
-        self.searchView.center.y =  0
-        _SEARCH_HIDDEN = true
-        
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        //Set views
+        searchView.layer.cornerRadius = 5.0
+        searchView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        searchView.layer.shadowOpacity = 0.1
+        searchView.layer.shadowRadius = 5.0
+        locationButton.layer.cornerRadius = 5.0
+        locationButton.layer.shadowOffset = CGSize(width: 1, height: 1)
+        locationButton.layer.shadowOpacity = 0.1
+        locationButton.layer.shadowRadius = 5.0
+    }
+    
+    /*  Verify if app is runned for the first time  */
+    func ifFirstTimeRunning() -> Bool{
+        if(NSUserDefaults.standardUserDefaults().objectForKey("FirstTime") == nil) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    /*  Set status bar text color  */
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     /* Called right before the segue is launched  */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "addPlaceSegue") {
+            
+            //Variables to be transfered to segue
             let destinationViewCOntroller : addPlaceViewController = segue.destinationViewController as! addPlaceViewController
             destinationViewCOntroller.placeLat = mapView.centerCoordinate.latitude
             destinationViewCOntroller.placeLon = mapView.centerCoordinate.longitude
-            var arrayOfFolders: [String] = []
+            var arrayOfFolders:[(name: String, ID: String)] = []
+            var arrayForPicker: [String] = [String]()
             
+            //Read Folders table
             let request = NSFetchRequest(entityName: "Folders")
             request.resultType = NSFetchRequestResultType.DictionaryResultType
             
+            //Get folders name and IDs from db
             do {
                 result = [AnyObject]()
                 result = try context.executeFetchRequest(request)
-                
                 for folders in result! {
-                    arrayOfFolders.append(folders.valueForKey("folderName") as! String)
+                    arrayForPicker.append(folders.valueForKey("folderName") as! String)
+                    arrayOfFolders.append(name: folders.valueForKey("folderName") as! String, ID: folders.valueForKey("folderId") as! String)
                 }
          
-                destinationViewCOntroller.pickerData = arrayOfFolders
+                destinationViewCOntroller.pickerData = arrayForPicker
+                destinationViewCOntroller.folderArray = arrayOfFolders
             } catch _ {
                 let AlertController = UIAlertController(
                     title: "ERROR",
@@ -125,13 +119,42 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
                 AlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                 self.presentViewController(AlertController, animated: true, completion: nil)
             }
-
-        
-        
-        
         }
     }
+
+    /*  Insert default folder if missing  */
+    func insertDefaultCategory() {
+        appDelagate = UIApplication.sharedApplication().delegate as! AppDelegate
+        context = appDelagate.managedObjectContext
+        
+        let newFolder = NSEntityDescription.insertNewObjectForEntityForName("Folders",
+            inManagedObjectContext: context) as NSManagedObject
     
+        newFolder.setValue("Home", forKey: "folderName")
+        newFolder.setValue("Home" + "_\(Int(arc4random_uniform(99999999)))", forKey: "folderId")
+        newFolder.setValue(6, forKey: "folderNumOfItems")
+        newFolder.setValue("home_i", forKey: "folderIcon")
+        newFolder.setValue("home_bg", forKey: "folderBackground")
+        
+        let newFolder2 = NSEntityDescription.insertNewObjectForEntityForName("Folders",
+            inManagedObjectContext: context) as NSManagedObject
+        
+        newFolder2.setValue("Restaurants", forKey: "folderName")
+        newFolder2.setValue("Restaurants" + "_\(Int(arc4random_uniform(99999999)))", forKey: "folderId")
+        newFolder2.setValue(2, forKey: "folderNumOfItems")
+        newFolder2.setValue("restaurants_i", forKey: "folderIcon")
+        newFolder2.setValue("restaurants_bg", forKey: "folderBackground")
+    
+        do {
+            try context.save()
+            print("Default Category Created")
+            
+        } catch _ {
+            print("Error")
+        }
+    }
+
+
     
     /*********************************************************************
         Keyboard functions
@@ -141,10 +164,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     func DismissKeyboard(){
         //Hide keyboard
         view.endEditing(true)
-        
-        //Hide search bar
-        searchView.center.y = 0
-        _SEARCH_HIDDEN = true
     }
     
     /*  Action Listener on keyboard return click  */
@@ -183,9 +202,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     
     /*  Center map by location and radius  */
     func centerMapOnLocation(location: CLLocation) {
+        
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(
             location.coordinate, _REGION_RADIUS * 2.0, _REGION_RADIUS * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+        
     }
     
     /*  Locate device in map  */
@@ -204,13 +225,12 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     
     /*  Listener onMapRegionChanged  */
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        pinView.image = UIImage(named: "pin_placed")!
-        
+        pinView.image = UIImage(named: "pin_placed.png")!
     }
     
     /*  Listener onMapRegionStartChange  */
     func mapView(mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
-        pinView.image = UIImage(named: "pin_icon")!
+        pinView.image = UIImage(named: "pin_hover.png")!
     }
     
     /*  CLLocation Error Handler  */
@@ -229,16 +249,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     /*  OnClick on location button  */
     @IBAction func locationButtonOnClick(sender: AnyObject) {
         locateUserInMap()
-    }
-    
-    /*  Toggle Search bar onClick  */
-    @IBAction func toggleSearchBar(sender: AnyObject) {
-        UIView.animateWithDuration(0.1, delay: 0, options: .CurveEaseOut, animations: {
-            self.searchView.center.y = (self._SEARCH_HIDDEN) ? self._ACTUAL_POS : 0
-            self._SEARCH_HIDDEN = (self._SEARCH_HIDDEN) ? false : true
-            }, completion: { finished in
-                //Do nothing.
-        })
     }
     /*********************************************************************
         ./Action Outlets

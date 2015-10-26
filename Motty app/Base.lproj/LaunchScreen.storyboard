@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -17,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_background" translatesAutoresizingMaskIntoConstraints="NO" id="LCD-Tk-Vmc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="LCD-Tk-Vmc">
                                 <rect key="frame" x="0.0" y="0.0" width="399" height="567"/>
                                 <animations/>
                                 <constraints>
@@ -25,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="567" id="6BO-tk-dAM"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_word" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-87-MC3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_word.png" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-87-MC3">
                                 <rect key="frame" x="225" y="378" width="150" height="40"/>
                                 <animations/>
                                 <constraints>
@@ -33,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="40" id="xQn-dc-mGG"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-T2-BVw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motty_splash_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-T2-BVw">
                                 <rect key="frame" x="195" y="132" width="210" height="215"/>
                                 <animations/>
                                 <constraints>
@@ -71,8 +70,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="motty_background" width="797" height="1131"/>
-        <image name="motty_splash_logo" width="512" height="507"/>
-        <image name="motty_word" width="300" height="89"/>
+        <image name="motty_background.png" width="797" height="1131"/>
+        <image name="motty_splash_logo.png" width="512" height="507"/>
+        <image name="motty_word.png" width="300" height="89"/>
     </resources>
 </document>

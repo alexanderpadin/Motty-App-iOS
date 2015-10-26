@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let customRed = UIColor(red: 223.0/255, green: 0.0/255, blue: 23.0/255, alpha: 1.0);
         
         UINavigationBar.appearance().barTintColor = customRed;
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName : UIFont(name: "Helvetica-Light", size: 20)!];
+        
+        
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: customRed], forState: .Selected);
         UITabBar.appearance().tintColor = customRed;
         

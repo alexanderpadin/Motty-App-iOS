@@ -10,13 +10,14 @@
     <entity name="Places" syncable="YES">
         <attribute name="folderId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeAddress" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="placeCoord" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeNote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeX" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="placeY" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <elements>
         <element name="Folders" positionX="-261" positionY="-9" width="128" height="120"/>
-        <element name="Places" positionX="-54" positionY="-9" width="128" height="135"/>
+        <element name="Places" positionX="-54" positionY="-9" width="128" height="150"/>
     </elements>
 </model>
